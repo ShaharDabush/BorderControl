@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace BorderControl;
 
 public partial class ThisIsBorderingInsanity : ContentPage
@@ -20,8 +22,7 @@ public partial class ThisIsBorderingInsanity : ContentPage
 			&& lbl.Text[lbl.Text.Length - 1] != '-'
 			&& lbl.Text[lbl.Text.Length - 1] != '*'
 			&& lbl.Text[lbl.Text.Length - 1] != '/'
-			&& lbl.Text[lbl.Text.Length - 1] != '%'
-			&& lbl.Text[lbl.Text.Length - 1] != '!'))
+			&& lbl.Text[lbl.Text.Length - 1] != '%'))
 		{
             lbl.Text += btn.Text;
         }
@@ -40,7 +41,22 @@ public partial class ThisIsBorderingInsanity : ContentPage
 	}
 	private void Calculate(object sender, EventArgs e)
 	{
-		Random rnd = new Random();
-		lbl.Text = $"{rnd.Next(0, 2000)}";
-	}
+        if (lbl.Text.Length > 0 && (lbl.Text[lbl.Text.Length - 1] == '.'
+            || lbl.Text[lbl.Text.Length - 1] == '+'
+            || lbl.Text[lbl.Text.Length - 1] == '-'
+            || lbl.Text[lbl.Text.Length - 1] == '*'
+            || lbl.Text[lbl.Text.Length - 1] == '/'
+            || lbl.Text[lbl.Text.Length - 1] == '%'))
+        {
+            lbl.Text = lbl.Text.Remove(lbl.Text.Length - 1);
+        }
+        try
+        {
+            lbl.Text = $"{new DataTable().Compute(lbl.Text, null)}";
+        }
+        catch
+        {
+            lbl.Text = "Error";
+        }
+    }
 }
