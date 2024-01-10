@@ -14,15 +14,19 @@ public partial class ThisIsBorderingInsanity : ContentPage
     }
 	private void MethodPrint(object sender, EventArgs e)
 	{
-		if (lbl.Text[lbl.Text.Length - 1] != '.'
+        Button btn = (Button)sender;
+        if (lbl.Text.Length > 0 && (lbl.Text[lbl.Text.Length - 1] != '.'
 			&& lbl.Text[lbl.Text.Length - 1] != '+'
 			&& lbl.Text[lbl.Text.Length - 1] != '-'
 			&& lbl.Text[lbl.Text.Length - 1] != '*'
 			&& lbl.Text[lbl.Text.Length - 1] != '/'
 			&& lbl.Text[lbl.Text.Length - 1] != '%'
-			&& lbl.Text[lbl.Text.Length - 1] != '!')
+			&& lbl.Text[lbl.Text.Length - 1] != '!'))
 		{
-            Button btn = (Button)sender;
+            lbl.Text += btn.Text;
+        }
+		else if (lbl.Text.Length == 0 && btn.Text == "-")
+		{
             lbl.Text += btn.Text;
         }
 	}
@@ -33,5 +37,10 @@ public partial class ThisIsBorderingInsanity : ContentPage
 	private void Reset(object sender, EventArgs e)
 	{
 		lbl.Text = "";
+	}
+	private void Calculate(object sender, EventArgs e)
+	{
+		Random rnd = new Random();
+		lbl.Text = $"{rnd.Next(0, 2000)}";
 	}
 }

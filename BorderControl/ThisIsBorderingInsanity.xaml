@@ -28,7 +28,7 @@
                 <Button Clicked="Delete" BackgroundColor="blue" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" Margin="1" Text="DEL" FontSize="30"></Button>
 
             </Grid>
-            <Button Grid.Row="2" Margin="2" BackgroundColor="Green" Text="=" FontSize="45"></Button>
+            <Button Clicked="Calculate" Grid.Row="2" Margin="2" BackgroundColor="Green" Text="=" FontSize="45"></Button>
         </Grid>    
     </Border>
 </ContentPage>
