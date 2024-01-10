@@ -5,23 +5,28 @@
              Title="ThisIsBorderingInsanity">
     <Border Margin="10">
         <Grid Margin="10" RowDefinitions="*, 3*, *" BackgroundColor="LightGray">
-            <Label Grid.Row="0" Text="joe biden" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#f0f5ba"></Label>
-            <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *, *" ColumnDefinitions="*, *, *, *">
-                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="0" Margin="1" Text="1" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="1" Margin="1" Text="2" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="2" Margin="1" Text="3" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="3" Margin="1" Text="+" FontSize="45"></Button>
-                <Button BackgroundColor="blue" Grid.Row="1" Grid.Column="3" Margin="1" Text="-" FontSize="45"></Button>
-                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="0" Margin="1" Text="4" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="1" Margin="1" Text="5" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="2" Margin="1" Text="6" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="3" Margin="1" Text="*" FontSize="45"></Button>
-                <Button BackgroundColor="blue" Grid.Row="3" Grid.Column="3" Margin="1" Text="/" FontSize="45"></Button>
-                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="0" Margin="1" Text="7" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="1" Margin="1" Text="8" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="2" Margin="1" Text="9" FontSize="45" Grid.RowSpan="2"></Button>
-                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="3" Margin="1" Text="%" FontSize="45"></Button>
-                <Button BackgroundColor="#b5e352" Grid.Row="5" Grid.Column="3" Margin="1" Text="CE" FontSize="45"></Button>
+            <Label x:Name="lbl" Grid.Row="0" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#f0f5ba" FontSize="30"></Label>
+            <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *, *, *, *" ColumnDefinitions="*, *, *, *">
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="0" Margin="1" Text="1" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="1" Margin="1" Text="2" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="2" Margin="1" Text="3" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="0" Grid.Column="3" Margin="1" Text="+" FontSize="30"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="1" Grid.Column="3" Margin="1" Text="-" FontSize="30"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="0" Margin="1" Text="4" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="1" Margin="1" Text="5" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="2" Margin="1" Text="6" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="2" Grid.Column="3" Margin="1" Text="*" FontSize="30"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="3" Grid.Column="3" Margin="1" Text="/" FontSize="30"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="0" Margin="1" Text="7" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="1" Margin="1" Text="8" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="2" Margin="1" Text="9" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="5" Grid.Column="3" Margin="1" Text="%" FontSize="30"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="4" Grid.Column="3" Margin="1" Text="!" FontSize="30"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="6" Grid.Column="1" Margin="1" Text="0" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="6" Grid.Column="0" Margin="1" Text="." FontSize="45" Grid.RowSpan="2"></Button>
+                <Button Clicked="Reset" BackgroundColor="#b5e352" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="4" Margin="1" Text="CE" FontSize="30"></Button>
+                <Button Clicked="Delete" BackgroundColor="blue" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" Margin="1" Text="DEL" FontSize="30"></Button>
+
             </Grid>
             <Button Grid.Row="2" Margin="2" BackgroundColor="Green" Text="=" FontSize="45"></Button>
         </Grid>    
