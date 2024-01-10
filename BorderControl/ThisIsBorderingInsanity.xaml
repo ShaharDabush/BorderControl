@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BorderControl.ThisIsBorderingInsanity"
+             Title="ThisIsBorderingInsanity">
+    <Border Margin="10">
+        <Grid Margin="10" RowDefinitions="*, 3*, *" BackgroundColor="LightGray">
+            <Label Grid.Row="0" Text="joe biden" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#f0f5ba"></Label>
+            <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *, *" ColumnDefinitions="*, *, *, *">
+                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="0" Margin="1" Text="1" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="1" Margin="1" Text="2" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="2" Margin="1" Text="3" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="0" Grid.Column="3" Margin="1" Text="+" FontSize="45"></Button>
+                <Button BackgroundColor="blue" Grid.Row="1" Grid.Column="3" Margin="1" Text="-" FontSize="45"></Button>
+                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="0" Margin="1" Text="4" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="1" Margin="1" Text="5" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="2" Margin="1" Text="6" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="2" Grid.Column="3" Margin="1" Text="*" FontSize="45"></Button>
+                <Button BackgroundColor="blue" Grid.Row="3" Grid.Column="3" Margin="1" Text="/" FontSize="45"></Button>
+                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="0" Margin="1" Text="7" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="1" Margin="1" Text="8" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="2" Margin="1" Text="9" FontSize="45" Grid.RowSpan="2"></Button>
+                <Button BackgroundColor="blue" Grid.Row="4" Grid.Column="3" Margin="1" Text="%" FontSize="45"></Button>
+                <Button BackgroundColor="#b5e352" Grid.Row="5" Grid.Column="3" Margin="1" Text="CE" FontSize="45"></Button>
+            </Grid>
+            <Button Grid.Row="2" Margin="2" BackgroundColor="Green" Text="=" FontSize="45"></Button>
+        </Grid>    
+    </Border>
+</ContentPage>
