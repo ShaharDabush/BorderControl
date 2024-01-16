@@ -3,30 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BorderControl.ThisIsBorderingInsanity"
              Title="ThisIsBorderingInsanity">
+    
     <Border Margin="10">
         <Grid Margin="10" RowDefinitions="*, 3*, *" BackgroundColor="LightGray">
-            <Label x:Name="lbl" Grid.Row="0" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#f0f5ba" FontSize="30"></Label>
+            <Label x:Name="lbl" Grid.Row="0" Text="{Binding Labe}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#f0f5ba" FontSize="30"></Label>
             <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *, *, *, *" ColumnDefinitions="*, *, *, *, *, *, *, *">
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="0" Margin="1" Text="1" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="2" Margin="1" Text="2" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="4" Margin="1" Text="3" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="0" Grid.Column="6" Margin="1" Text="+" FontSize="30" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="1" Grid.Column="6" Margin="1" Text="-" FontSize="30" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="0" Margin="1" Text="4" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="2" Margin="1" Text="5" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="4" Margin="1" Text="6" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="2" Grid.Column="6" Margin="1" Text="*" FontSize="30" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="3" Grid.Column="6" Margin="1" Text="/" FontSize="30" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="0" Margin="1" Text="7" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="2" Margin="1" Text="8" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="4" Margin="1" Text="9" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="5" Grid.Column="6" Margin="1" Text="%" FontSize="30" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="6" Margin="1" Text="(" FontSize="30"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="7" Margin="1" Text=")" FontSize="30"></Button>
-                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="6" Grid.Column="2" Margin="1" Text="0" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="6" Grid.Column="0" Margin="1" Text="." FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2"></Button>
-                <Button Clicked="Reset" BackgroundColor="#b5e352" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="4" Margin="1" Text="CE" FontSize="30"></Button>
-                <Button Clicked="Delete" BackgroundColor="blue" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4" Margin="1" Text="DEL" FontSize="30"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="0" Margin="1" Text="1" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="1"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="2" Margin="1" Text="2" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="2"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="0" Grid.Column="4" Margin="1" Text="3" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="3"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="0" Grid.Column="6" Margin="1" Text="+" FontSize="30" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="+"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="1" Grid.Column="6" Margin="1" Text="-" FontSize="30" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="-"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="0" Margin="1" Text="4" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="4"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="2" Margin="1" Text="5" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="5"></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="2" Grid.Column="4" Margin="1" Text="6" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="6"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="2" Grid.Column="6" Margin="1" Text="*" FontSize="30" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="*"></Button>
+                <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="3" Grid.Column="6" Margin="1" Text="/" FontSize="30" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="/" ></Button>
+                <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="0" Margin="1" Text="7" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="7"</Button>
+                    <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="2" Margin="1" Text="8" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="8"></Button>
+                    <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="4" Margin="1" Text="9" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="9"></Button>
+                    <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="5" Grid.Column="6" Margin="1" Text="%" FontSize="30" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="%"></Button>
+                    <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="6" Margin="1" Text="(" FontSize="30" Command="{Binding ButtonCommand}" CommandParameter="("></Button>
+                    <Button Clicked="Print" BackgroundColor="blue" Grid.Row="4" Grid.Column="7" Margin="1" Text=")" FontSize="30" Command="{Binding ButtonCommand}" CommandParameter=")"></Button>
+                    <Button Clicked="Print" BackgroundColor="blue" Grid.Row="6" Grid.Column="2" Margin="1" Text="0" FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="0"></Button>
+                    <Button Clicked="MethodPrint" BackgroundColor="blue" Grid.Row="6" Grid.Column="0" Margin="1" Text="." FontSize="45" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding ButtonCommand}" CommandParameter="."></Button>
+                    <Button Clicked="Reset" BackgroundColor="#b5e352" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="4" Margin="1" Text="CE" FontSize="30" Command="{Binding ButtonCommand}" CommandParameter="1"></Button>
+                    <Button Clicked="Delete" BackgroundColor="blue" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4" Margin="1" Text="DEL" FontSize="30" Command="{Binding ButtonCommand}" CommandParameter="1"></Button>
 
             </Grid>
             <Button Clicked="Calculate" Grid.Row="2" Margin="2" BackgroundColor="Green" Text="=" FontSize="45"></Button>
